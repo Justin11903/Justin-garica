@@ -1,0 +1,121 @@
+<html>
+<head>
+<title></title>
+
+<style type="text/css">
+body {
+	background-image: url("https://newton.ncc.edu/gansonj/ite154/img/fall.jpg");
+	color: darkred;
+	text-align: center;
+	font-family: arial;
+}
+
+#pagewrap {
+	background-color: lightyellow;
+	border: 8px maroon double;
+	width: 500px;
+	margin: 40px auto 0px auto;
+	padding: 20px;
+	height: 300px;
+}
+
+#header {
+	font-size: 1.25em;
+	margin-bottom: 20px;
+	border-bottom: 3px darkred solid;
+	padding-bottom: 5px;
+}
+
+#firstname {
+	background: lightblue;
+	color: maroon;
+	font-size: 1.15em;
+	border: 2px darkgreen solid;
+	padding: 3px;
+}
+
+#formtext {
+	margin-top: 15px;
+}
+
+#copybutton {
+	background-color: maroon;
+	color: yellow;
+	border: 2px #000000 solid;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#copybutton:hover {
+	background-color: yellow;
+	color: maroon;
+	border: 2px #000000 solid;
+	cursor: pointer;
+}
+
+#output {
+	margin-top: 20px;
+	font-size: 1.25em;
+	color: darkblue;
+}
+#textcolor{
+    color: green;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready( function() {
+
+	$("#copybutton").on( "click", function() {
+
+		// obtain input by accessing the textfield by its ID
+		var username = $("#firstname").val();
+
+		// constructing output by joining the String "Hello" and the variable called fname
+		var msg = "<div id='textcolor'>Hello " + username + "!!!!!!</div>";
+		msg += "<div>Have a nice day!</div>";
+
+		// display output to the div#output with an animation
+		$("#output").hide().html( msg ).show( "fade", 3000 );
+
+	} ); // ends click handler code
+
+} ); // ends document.ready
+</script>
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<div id="pagewrap">
+
+	<div id="header">
+		Intro to JavaScript.<br />
+		Copy text from form, place back on page
+	</div>
+
+	<!-- form is here -->
+	<form>
+	
+		<div id="formtext">Enter your first name</div>
+		<div><input type="text" id="firstname"></div>
+		
+		<div style="margin-top:15px;">
+			<input type="button" value="Copy Text" id="copybutton">
+		</div>
+	
+	</form>
+
+	<div id="output"></div>
+	
+</div>  <!-- closes div#pagewrap -->
+
+</body>
+</html>

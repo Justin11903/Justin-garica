@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Complex Website</title>
+
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header section -->
+  <header>
+    <div class="container">
+      <h1>My Complex Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content section -->
+  <section id="main">
+    <div class="container">
+      <article id="intro">
+        <h2>Welcome to My Complex Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel ex ut nulla tincidunt fermentum. Pellentesque tincidunt malesuada neque, sit amet fermentum quam tincidunt eu. Nam sed ipsum et dolor bibendum euismod in eu lacus.</p>
+        <a href="#" class="btn">Learn More</a>
+      </article>
+
+      <article id="services">
+        <h3>Our Services</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel ex ut nulla tincidunt fermentum. Pellentesque tincidunt malesuada neque, sit amet fermentum quam tincidunt eu. Nam sed ipsum et dolor bibendum euismod in eu lacus.</p>
+        <ul>
+          <li>Service 1</li>
+          <li>Service 2</li>
+          <li>Service 3</li>
+        </ul>
+      </article>
+
+      <article id="testimonials">
+        <h3>Testimonials</h3>
+        <blockquote>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel ex ut nulla tincidunt fermentum. Pellentesque tincidunt malesuada neque, sit amet fermentum quam tincidunt eu. Nam sed ipsum et dolor bibendum euismod in eu lacus."
+          <cite>- John Doe</cite>
+        </blockquote>
+
+        <blockquote>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel ex ut nulla tincidunt fermentum. Pellentesque tincidunt malesuada neque, sit amet fermentum quam tincidunt eu. Nam sed ipsum et dolor bibendum euismod in eu lacus."
+          <cite>- Jane Doe</cite>
+        </blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 My Complex Website</p>
+    </div>
+  </footer>
+
+  <!-- Link to external jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jQuery code for smooth scrolling when clicking on links -->
+  <script>
+    $('a[href*="#"]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+      }, 500, 'linear');
+    });
+  </script>
+
+</body>
+</html>

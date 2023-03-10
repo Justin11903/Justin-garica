@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>JavaScript Intro</title>
+
+<style type="text/css">
+#bodystyles {
+	background-color: #350608;
+	width: 600px;
+	margin: 30px auto 0px auto;
+}
+
+#pagewrap {
+	text-align: center;
+	border: 6px #F2C545 solid;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	font-family: arial;
+	padding: 20px;
+	min-height: 600px;
+}
+
+#header {
+	background-color: C73B0B;
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 15px;
+}
+
+#subheader {
+	background-color: F2C545;
+	color: #350608;
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 15px;
+}
+
+#mybutton {
+	border: 2px #FF9E01 solid;
+	background-color: darkblue;
+	color: white;
+	padding: 8px;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+#mybutton:hover {
+	border: 2px darkblue solid;
+	background-color: #FF9E01;
+	color: white;
+}
+
+.spacer {
+	margin-top: 60px;
+}
+
+#output {
+	font-size: 4em;
+}
+
+</style>
+<!--Javascript begins here-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+<script type="text/JavaScript">
+$(document).ready( function(){
+
+    $("#mybutton").on( "click", function()  {
+        $("#output").hide().html( "Hello").show("slide",3000);
+
+        $("#bodystyles").css( "background-color", "green" );
+    } ) ;
+
+} );
+
+
+</script>
+
+
+</head>
+
+<body id="bodystyles">
+
+<div id="pagewrap">
+
+	<div id="header">ITE 154 Spring 2023</div>
+	
+	<div id="subheader">First example of JavaScript!</div>
+	
+	<div class="spacer">
+		<form>
+			<input type="button" value="Click Me!" id="mybutton" />
+		</form>
+	</div>
+	
+	<div class="spacer" id="output"></div>
+	
+</div> <!-- ends div#pagewrap -->
+
+</body>
+</html>

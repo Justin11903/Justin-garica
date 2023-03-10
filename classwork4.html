@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title></title>
+
+        <style type="text/css">
+            #bodystyle {
+                color: rgb(57, 109, 133);
+                text-align: center;
+                font-family: arial;
+                background-image: url("http://newton.ncc.edu/gansonj/ite154/img/birds.jpg");
+                font-size:  1.25em;
+            }
+
+            #pagewrap {
+                border: 10px maroon solid;
+                padding: 25px;
+                background-image: url("http://newton.ncc.edu/gansonj/ite154/img/lines.jpg");
+                border-radius: 25px;
+                width: 650px;
+                margin: 25px auto 0px auto; /* top right bottom left */
+            }
+
+            #heading {
+                color:white;
+                border-bottom: 6px maroon double;
+                padding-bottom: 10px;
+            }
+
+            .formfield {
+                background-color: lightgray;
+                padding: 4px;
+                color: black;
+                border: 4px rgb(122, 53, 53) double;
+                width: 200px;
+            }
+
+            .spacer {
+                margin-top: 15px;
+            }
+
+            #mybutton {
+                border-radius: 25px;
+                background-color :lightgray;
+                color: black;
+                border: 3px blue solid;
+                padding: 5px;
+            }
+
+            #mybutton:hover {
+                background-color: maroon;
+                color: blue;
+
+            }
+
+
+
+        </style>
+        
+    </head>
+    <body id="bodystyle">
+        <div id="pagewrap">
+            <div id="heading">Send us a comment</div>
+            
+            <form>
+
+                <div class="spacer">Enter your email</div>
+                <div><input type="text" class="formfield"></div>
+
+                <div class="spacer">Select your state</div>
+                <div>
+                    <select class="formfield">
+                        <option>New York</option>
+                        <option>Iowa</option>
+                        <option>Idaho</option>
+                        <option>Florida</option>
+                    </select>
+                </div><!--closes select your state menu-->
+
+                <div class="spacer">Enter your comment</div>
+                <div>
+                    <textarea class="formfield" rows="5"></textarea>
+                </div>
+
+                <div class="spacer"><!-- Button on page-->
+                    <input type="button" value="Submit Comment" id="mybutton">
+                </div>
+
+            </form>
+        
+        </div><!--ends div#pagewrap-->
+
+    </body>
+</html>

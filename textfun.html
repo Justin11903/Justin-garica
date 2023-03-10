@@ -1,0 +1,165 @@
+<html>
+<head>
+<title></title>
+
+<style type="text/css">
+
+body {
+	background-image: url("http://newton.ncc.edu/gansonj/ite154/img/bk2.jpg");
+	font-family: arial;
+	color: darkblue;
+}
+
+#contentwrap {
+	border: 8px gold solid;
+	background-image: url("http://newton.ncc.edu/gansonj/ite154/img/swirls.jpg");
+	padding: 20px;
+	width: 700px;
+	margin: 25px auto 0px auto;
+}
+
+#maintitle {
+	background-color: darkblue;
+	color: white;
+	text-align: center;
+	font-size: 1.85em;
+	border: 6px red double;
+	padding: 15px 0px 15px 0px;
+}
+
+#subtitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.25em;
+	margin-top: 20px;
+}
+
+#formwrap {
+	background-color: lightyellow;
+	border: 6px red double;
+	padding: 15px;
+	margin: 15px 35px 0px 35px;
+}
+
+.spacer {
+	margin-top: 12px;
+}
+
+#fontbutton {
+	background-color: lightblue;
+	color: red;
+	padding: 2px;
+	border: 2px darkblue solid;
+	cursor: pointer;
+}
+
+#fontbutton:hover {
+	background-color: darkblue;
+	color: white;
+	border: 2px maroon solid;
+}
+
+#output {
+	border-top: 6px blue double;
+	border-bottom: 6px blue double;
+	margin: 10px 0px 10px 0px;
+
+	padding: 5px 0px 5px 0px;
+	font-size: 1.25em;
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+$(document).ready( function() {
+
+        $("#usertext").on( "keyup",function(){
+
+            var usertext = $("#usertext").val();
+
+            $("#output").html( usertext );
+
+        }); // ends keyup handler
+
+        $("#fontbutton").on( "click",function(){
+
+            var userfont = $("#userfont").val()
+            $("#output").css ( "font-family", userfont)
+
+        }) // ends click event handler
+
+        $("#userbold").on( "click",function(){
+
+            if( $("#userbold").prop( "checked") == true){
+                //check box is checked
+                $("#output").css( "font-weight", "bold")
+            }
+            else {
+                // check box IS NOT checked
+                $("#output").css( "font-weight", "normal")
+            }
+        }); // ends bold click handler
+
+		$(".usercolor").on( "click", function(){
+
+		});
+	
+} );  // ends document.ready
+
+</script>
+
+</head>
+<body>
+
+<div id="contentwrap">
+
+	<div id="maintitle">Fun with Form Elements</div>
+
+	<div id="output"></div> <!-- output div tag is up top here -->
+		
+	<div id="formwrap">
+	
+		<form> <!-- form goes here -->
+		<div class="spacer">Enter Text</div>
+        <div>
+            <textarea cols="50" rows="6" id="usertext" style="resize:none;"></textarea>
+        </div>
+
+        <div class="spacer">Select Font</div>
+        <div>
+            <select id="userfont">
+                <option value="arial">Arial</option>
+                <option value="times new roman">Times New Roman</option>
+                <option value="comic sans ms">Comic Sans MS</option>
+                <option value="impact">Impact</option>
+            </select>
+
+            <input type="button" value="Change Font" id="fontbutton">
+
+        </div>
+
+        <div class="spacer">Bold Text</div>
+        <div>
+            <input type="checkbox" id="userbold"> Bold
+        </div>
+
+        <div class="spacer">Select Color</div>
+
+        <div><input type="radio" class="usercolor" value="green" name="color">Green</div>
+        <div><input type="radio" class="usercolor" value="blue" name="color">Blue</div>
+        <div><input type="radio" class="usercolor" value="red" name="color">Red</div>
+        <div><input type="radio" class="usercolor" value="orange" name="color">Orange</div>
+
+
+		</form>
+		
+	</div> <!-- closes div#formwrap -->
+
+</div> <!-- closes div#contentwrap -->
+
+</body>
+</html>

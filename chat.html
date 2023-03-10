@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    /* CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    section {
+      width: 80%;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0px 0px 5px #ccc;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HTML -->
+  <header>
+    <h1>My Basic Webpage</h1>
+  </header>
+
+  <section>
+    <h2>Welcome!</h2>
+    <p>This is a basic webpage created using HTML, CSS, jQuery, and JavaScript.</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <button id="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+  </section>
+
+  <!-- JavaScript/jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#submit').click(function(event) {
+        event.preventDefault();
+        var name = $('#name').val();
+        $('#output').text('Hello, ' + name + '!');
+      });
+    });
+  </script>
+
+</body>
+</html>
